@@ -653,8 +653,14 @@ function Chat() {
                     if (isUser) {
                       return (
                         <div key={i} className="flex justify-end">
-                          <div className="max-w-[85%] px-4 py-2.5 rounded-2xl rounded-br-md bg-kumo-contrast text-kumo-inverse leading-relaxed">
-                            {text}
+                          <div className="max-w-[85%] rounded-2xl rounded-br-md bg-kumo-contrast text-kumo-inverse leading-relaxed">
+                            <Streamdown
+                              className="sd-theme rounded-2xl rounded-br-md p-3"
+                              controls={false}
+                              isAnimating={false}
+                            >
+                              {text}
+                            </Streamdown>
                           </div>
                         </div>
                       );
